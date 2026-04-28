@@ -1,0 +1,43 @@
+{
+  "company": "COCHIEF",
+  "top": {
+    "title_zh": "總經理",
+    "title_en": "General Manager"
+  },
+  "departments": [
+    {
+      "name_zh": "業務部",
+      "name_en": "Sales Dept.",
+      "sections": [
+        { "name_zh": "業務課", "name_en": "Sales" },
+        { "name_zh": "行銷課", "name_en": "Marketing" }
+      ]
+    },
+    {
+      "name_zh": "工程研發部",
+      "name_en": "R&D Dept.",
+      "sections": [
+        { "name_zh": "設計課", "name_en": "Design" },
+        { "name_zh": "工程課", "name_en": "Engineer" }
+      ]
+    },
+    {
+      "name_zh": "廠務部",
+      "name_en": "Factory Dept.",
+      "sections": [
+        { "name_zh": "生產課", "name_en": "Produce" },
+        { "name_zh": "資材課", "name_en": "Purchase" },
+        { "name_zh": "生管課", "name_en": "P/C" }
+      ]
+    },
+    {
+      "name_zh": "管理部",
+      "name_en": "Management Dept.",
+      "sections": [
+        { "name_zh": "品管課", "name_en": "Q/C" },
+        { "name_zh": "庶務課", "name_en": "General" },
+        { "name_zh": "財會課", "name_en": "Finance" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+version: 1
+name: annual-okr-default
+description: 每位同仁每年度可配置 O1~O5，未使用可留白。
+
+objective_template:
+  allowed_objective_no: [1, 2, 3, 4, 5]
+  required_fields:
+    - objective_no
+    - title
+    - function_tag
+    - weight
+
+key_result_template:
+  min_kr_per_objective: 2
+  max_kr_per_objective: 5
+  required_fields:
+    - metric_name
+    - direction
+    - target_value
+  allowed_direction:
+    - higher_better
+    - lower_better
+    - range
+
+scoring:
+  objective_score: average(kr_progress_pct)
+  annual_score: sum(objective_score * weight)
+  threshold:
+    achieved: ">=70"
+    partial: "50-69"
+    not_achieved: "<50"
+
+checkpoints:
+  - code: mid_year
+    title: 年中檢核
+    month: 6
+  - code: end_year
+    title: 年底檢核
+    month: 12
+
+carry_forward:
+  enabled: true
+  rule: 上一年已存在的 objective 可複製到下一年並重新調整 target。
